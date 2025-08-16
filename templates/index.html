@@ -18,7 +18,7 @@
 
       body {
          background: #222;
-         height: 100vh;
+         min-height: 100vh;
       }
 
       .content {
@@ -26,11 +26,11 @@
          height: 100%;
 
          padding: 10px;
-         gap: 10px;
+         gap: 5px;
 
          display: grid;
 
-         grid-template-columns: repeat(auto-fill, 10%);
+         grid-template-columns: repeat(auto-fill, 11%);
 
          justify-content: center;
          /* centre horizontalement toute la grille */
@@ -85,7 +85,7 @@
 
       .name {
 
-         font-size: 1.2vw;
+         font-size: 1.1vw;
       }
 
       .touch {
@@ -134,7 +134,7 @@
       </select>
    </div>
 
-   <div class="content">
+   <div class="content" id="content">
       <button>
          <div class="name">Volet</div>
          <div class="touch">P</div>
@@ -325,6 +325,7 @@
 <script>
 
    const select = document.querySelector("select")
+   const content  = document.getElementById("content")
 
 
    // Requête pour récupérer les avions
@@ -355,15 +356,50 @@
    select.addEventListener("change", (e) => {
       getAircraftTouch()
 
-      
+
    })
-   
-   
+
+
    function getAircraftTouch() {
       const selectedValue = select.value;
       console.log("Avion sélectionné :", selectedValue);
 
+      fetch("/api/getAircraftTouch", {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json"
+         },
+         body: JSON.stringify({ aircraft: selectedValue })
+      })
+         .then(response => {
+            return response.json();
+         })
+         .then(data => {
+            console.log("Touches reçues :", data);
+
+            content.innerHTML = ""
+
+            data.forEach(touch => {
+               console.log(touch)
+
+               const newButton = `
+               
+                  <button>
+                     <div class="name">${touch.name}</div>
+                     <div class="touch">${touch.touch}</div>
+                  </button>
+               `
+
+               content.innerHTML += newButton
+
+            });
+
+         })
+         .catch(error => {
+            console.error("Erreur lors de la récupération :", error);
+         });
    }
+
 
 
 </script>

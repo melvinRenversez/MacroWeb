@@ -11,12 +11,12 @@
    ],
    "Avions 2": [
       {
-         "name": "Volet",
-         "touch": "P"
+         "name": "Aerofrein",
+         "touch": "B"
       },
       {
-         "name": "Train d'atterrissage",
-         "touch": "G"
+         "name": "Ejection",
+         "touch": "F"
       }
    ]
 }
