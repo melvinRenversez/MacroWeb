@@ -9,6 +9,9 @@
          margin: 0;
          padding: 0;
          box-sizing: border-box;
+
+         font-family: 'Courier New', Courier, monospace;
+
       }
 
       body {
@@ -50,6 +53,12 @@
 
          cursor: pointer;
 
+         display: flex;
+
+         flex-direction: column;
+
+         justify-content: space-evenly;
+
       }
 
       button:active {
@@ -62,17 +71,61 @@
 
       .name {
 
-         font-size: 1.3em;
+          font-size: 1.2vw;
+         }
+         
+         .touch {
+            
+            font-size: 1vw;
       }
 
-      .touch {
+      .form {
 
-         font-size: 0.9em;
+         padding-top: 50px;
+
+         display: flex;
+         flex-direction: column;
+
+
+         align-items: center;
+
+      }
+
+      select {
+         width: 33%;
+
+         border: none;
+
+         padding-left: 15px;
+         padding-bottom: 5px;
+
+         background: transparent;
+         border-bottom: 1px solid #eee;
+
+         color: #eee;
+
+         outline: none;
+
       }
    </style>
 </head>
 
 <body>
+
+   <div class="form">
+      <select name="" id="">
+
+         <option value="">fghjdk</option>
+         <option value="">fghjdk</option>
+         <option value="">fghjdk</option>
+         <option value="">fghjdk</option>
+         <option value="">fghjdk</option>
+         <option value="">fghjdk</option>
+         <option value="">fghjdk</option>
+         <option value="">fghjdk</option>
+
+      </select>
+   </div>
 
    <div class="content">
       <button>
@@ -80,8 +133,8 @@
          <div class="touch">P</div>
       </button>
       <button>
-         <div class="name">Volet</div>
-         <div class="touch">P</div>
+         <div class="name">Train d'attérisage</div>
+         <div class="touch">G</div>
       </button>
       <button>
          <div class="name">Volet</div>

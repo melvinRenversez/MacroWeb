@@ -1,0 +1,22 @@
+{
+   "su-17": [
+      {
+         "name": "Volet",
+         "touch": "P"
+      },
+      {
+         "name": "Train d'atterrissage",
+         "touch": "G"
+      }
+   ],
+   "Avions 2": [
+      {
+         "name": "Volet",
+         "touch": "P"
+      },
+      {
+         "name": "Train d'atterrissage",
+         "touch": "G"
+      }
+   ]
+}
