@@ -4,13 +4,13 @@
          "name": "Volet",
          "touch": "p",
          "switchable": true,
-         "default": false 
+         "default": false
       },
       {
          "name": "Train d'atterrissage",
          "touch": "g",
          "switchable": true,
-         "default": true 
+         "default": true
       }
    ],
    "Avions 2": [
@@ -284,5 +284,29 @@
       }
    ],
    "Arma 3": [
+      {
+         "name": "Cfhh",
+         "switchable": true,
+         "touch": "",
+         "default": false
+      },
+      {
+         "name": "Pojnb",
+         "touch": "",
+         "switchable": false,
+         "default": false
+      },
+      {
+         "name": "Fvvb",
+         "switchable": true,
+         "default": true,
+         "touch": ""
+      },
+      {
+         "name": "L'bv",
+         "switchable": true,
+         "touch": "",
+         "default": false
+      }
    ]
 }

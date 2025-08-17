@@ -716,6 +716,13 @@ select.addEventListener("change", () => {
          .catch(error => {
             console.error("Erreur lors de la récupération :", error);
          });
+
+      showModal()
+
+      setTimeout(() => {
+         getAircraftTouch()
+      }, 500);
+
    }
 
 

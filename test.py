@@ -147,6 +147,9 @@ def sendNewTouch():
     
     with open("data.json", "w", encoding="utf-8") as f :
         json.dump(allTouch, f, ensure_ascii=False, indent=3)
+        
+    
+        return jsonify({"status": "ok"})
     
 
 
