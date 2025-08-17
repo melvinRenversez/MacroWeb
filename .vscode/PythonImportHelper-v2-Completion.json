@@ -1,0 +1,355 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template_string",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Controller",
+        "importPath": "pynput.keyboard",
+        "description": "pynput.keyboard",
+        "isExtraImport": true,
+        "detail": "pynput.keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "Key",
+        "importPath": "pynput.keyboard",
+        "description": "pynput.keyboard",
+        "isExtraImport": true,
+        "detail": "pynput.keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "require_token",
+        "kind": 2,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "def require_token():\n    token = request.headers.get(\"X-Token\") or request.args.get(\"token\")\n    if SECRET_TOKEN and token != SECRET_TOKEN:\n        abort(401)\ndef press_combo(combo: str):\n    BACKEND.press_combo(combo)\ndef run_macro(macro_name: str):\n    seq = MACROS.get(macro_name, [])\n    for step in seq:\n        press_combo(step[\"combo\"])",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "press_combo",
+        "kind": 2,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "def press_combo(combo: str):\n    BACKEND.press_combo(combo)\ndef run_macro(macro_name: str):\n    seq = MACROS.get(macro_name, [])\n    for step in seq:\n        press_combo(step[\"combo\"])\n        time.sleep(float(step.get(\"delay\", 0)))\n@app.route(\"/\")\ndef index():\n    return render_template_string(",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "run_macro",
+        "kind": 2,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "def run_macro(macro_name: str):\n    seq = MACROS.get(macro_name, [])\n    for step in seq:\n        press_combo(step[\"combo\"])\n        time.sleep(float(step.get(\"delay\", 0)))\n@app.route(\"/\")\ndef index():\n    return render_template_string(\n        INDEX_HTML,\n        buttons=BUTTONS,",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "def index():\n    return render_template_string(\n        INDEX_HTML,\n        buttons=BUTTONS,\n        token=SECRET_TOKEN,\n        backend=getattr(BACKEND, \"name\", \"unknown\"),\n    )\n@app.post(\"/api/press\")\ndef api_press():\n    require_token()",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "api_press",
+        "kind": 2,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "def api_press():\n    require_token()\n    data = request.get_json(force=True, silent=True) or {}\n    btn_id = data.get(\"id\")\n    combo = data.get(\"combo\")\n    macro = data.get(\"macro\")\n    if btn_id:\n        # find button definition\n        found = next((b for b in BUTTONS if b[\"id\"] == btn_id), None)\n        if not found:",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "BACKEND",
+        "kind": 5,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "BACKEND = None\ntry:\n    from pynput.keyboard import Key, Controller\n    class PynputBackend:\n        name = \"pynput\"\n        def __init__(self) -> None:\n            self.kb = Controller()\n            self.special = {\n                \"ctrl\": Key.ctrl,\n                \"shift\": Key.shift,",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_TOKEN",
+        "kind": 5,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "SECRET_TOKEN = os.environ.get(\"DECK_TOKEN\", \"change-me\")\nHOST = os.environ.get(\"DECK_HOST\", \"0.0.0.0\")\nPORT = int(os.environ.get(\"DECK_PORT\", \"5000\"))\n# === Define your buttons and macros here ===\n# Each button can either send a single combo, or trigger a named macro sequence.\n# Adjust combos to match your own DCS bindings.\nBUTTONS: List[Dict] = [\n    {\"id\": \"gear\", \"label\": \"Gear Toggle\", \"combo\": \"w\"},\n    {\"id\": \"flaps\", \"label\": \"Flaps Cycle\", \"combo\": \"f\"},\n    {\"id\": \"brake\", \"label\": \"Wheel Brake\", \"combo\": \"w\"},",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "HOST",
+        "kind": 5,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "HOST = os.environ.get(\"DECK_HOST\", \"0.0.0.0\")\nPORT = int(os.environ.get(\"DECK_PORT\", \"5000\"))\n# === Define your buttons and macros here ===\n# Each button can either send a single combo, or trigger a named macro sequence.\n# Adjust combos to match your own DCS bindings.\nBUTTONS: List[Dict] = [\n    {\"id\": \"gear\", \"label\": \"Gear Toggle\", \"combo\": \"w\"},\n    {\"id\": \"flaps\", \"label\": \"Flaps Cycle\", \"combo\": \"f\"},\n    {\"id\": \"brake\", \"label\": \"Wheel Brake\", \"combo\": \"w\"},\n    {\"id\": \"light\", \"label\": \"Lights\", \"combo\": \"l\"},",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "PORT = int(os.environ.get(\"DECK_PORT\", \"5000\"))\n# === Define your buttons and macros here ===\n# Each button can either send a single combo, or trigger a named macro sequence.\n# Adjust combos to match your own DCS bindings.\nBUTTONS: List[Dict] = [\n    {\"id\": \"gear\", \"label\": \"Gear Toggle\", \"combo\": \"w\"},\n    {\"id\": \"flaps\", \"label\": \"Flaps Cycle\", \"combo\": \"f\"},\n    {\"id\": \"brake\", \"label\": \"Wheel Brake\", \"combo\": \"w\"},\n    {\"id\": \"light\", \"label\": \"Lights\", \"combo\": \"l\"},\n    {\"id\": \"weapon\", \"label\": \"Release Weapon\", \"combo\": \"space\"},",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "app = Flask(__name__)\ndef require_token():\n    token = request.headers.get(\"X-Token\") or request.args.get(\"token\")\n    if SECRET_TOKEN and token != SECRET_TOKEN:\n        abort(401)\ndef press_combo(combo: str):\n    BACKEND.press_combo(combo)\ndef run_macro(macro_name: str):\n    seq = MACROS.get(macro_name, [])\n    for step in seq:",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "INDEX_HTML",
+        "kind": 5,
+        "importPath": "exemples.fullServer",
+        "description": "exemples.fullServer",
+        "peekOfCode": "INDEX_HTML = r\"\"\"\n<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\" />\n  <title>DCS Macro Deck</title>\n  <style>\n    :root { --gap: 14px; --radius: 16px; --pad: 18px; }\n    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, \"Noto Sans\", Arial, sans-serif; margin:0; background:#0b0f14; color:#e8eef6; }",
+        "detail": "exemples.fullServer",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def index():\n    return render_template(\"index.html\")\n@app.route(\"/api/getAircraftName\")\ndef getAircraftName():\n    with open(\"data.json\", \"r\", encoding=\"utf-8\") as f:\n        data = json.load(f)\n    # print(data)\n    aicraftName = list(data.keys())\n    return aicraftName\n@app.route(\"/api/getAircraftTouch\", methods=[\"POST\"])",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "getAircraftName",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def getAircraftName():\n    with open(\"data.json\", \"r\", encoding=\"utf-8\") as f:\n        data = json.load(f)\n    # print(data)\n    aicraftName = list(data.keys())\n    return aicraftName\n@app.route(\"/api/getAircraftTouch\", methods=[\"POST\"])\ndef getAircraftTouch():\n    data = request.get_json()\n    aircraftName = data.get(\"aircraft\")",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "getAircraftTouch",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def getAircraftTouch():\n    data = request.get_json()\n    aircraftName = data.get(\"aircraft\")\n    print(\"aircraft ISS ::: \", aircraftName)\n    with open(\"data.json\", \"r\", encoding=\"utf-8\") as f:\n        data = json.load(f)\n    aircraft = data[aircraftName]\n    print(aircraft)\n    return aircraft\n@app.route(\"/api/sendCommand\", methods=[\"POST\"])",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "sendCommand",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def sendCommand():\n    data = request.get_json()\n    cmd = data.get(\"cmd\")  # exemple cmd = P\n    print(\"CMD ISS ::: \", cmd)\n    try:\n        # Découper seulement si il y a un \"+\"\n        parts = cmd.split(\"+\") if \"+\" in cmd else [cmd]\n        keys_to_press = []\n        for part in parts:\n            part = part.strip()",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "HOST",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "HOST = \"0.0.0.0\"\nPORT = 5000\napp = Flask(__name__)\nkeyboard = Controller()\nSPECIAL_KEYS = {\n    \"Shift\": Key.shift,\n    \"Ctrl\": Key.ctrl,\n    \"Alt\": Key.alt,\n    \"Tab\": Key.tab,\n    \"Enter\": Key.enter,",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "PORT = 5000\napp = Flask(__name__)\nkeyboard = Controller()\nSPECIAL_KEYS = {\n    \"Shift\": Key.shift,\n    \"Ctrl\": Key.ctrl,\n    \"Alt\": Key.alt,\n    \"Tab\": Key.tab,\n    \"Enter\": Key.enter,\n    \"Esc\": Key.esc,",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "app = Flask(__name__)\nkeyboard = Controller()\nSPECIAL_KEYS = {\n    \"Shift\": Key.shift,\n    \"Ctrl\": Key.ctrl,\n    \"Alt\": Key.alt,\n    \"Tab\": Key.tab,\n    \"Enter\": Key.enter,\n    \"Esc\": Key.esc,\n    \"Space\": Key.space,",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "keyboard",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "keyboard = Controller()\nSPECIAL_KEYS = {\n    \"Shift\": Key.shift,\n    \"Ctrl\": Key.ctrl,\n    \"Alt\": Key.alt,\n    \"Tab\": Key.tab,\n    \"Enter\": Key.enter,\n    \"Esc\": Key.esc,\n    \"Space\": Key.space,\n    \"Up\": Key.up,",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "SPECIAL_KEYS",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "SPECIAL_KEYS = {\n    \"Shift\": Key.shift,\n    \"Ctrl\": Key.ctrl,\n    \"Alt\": Key.alt,\n    \"Tab\": Key.tab,\n    \"Enter\": Key.enter,\n    \"Esc\": Key.esc,\n    \"Space\": Key.space,\n    \"Up\": Key.up,\n    \"Down\": Key.down,",
+        "detail": "test",
+        "documentation": {}
+    }
+]

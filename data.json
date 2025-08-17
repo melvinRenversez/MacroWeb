@@ -2,21 +2,29 @@
    "su-17": [
       {
          "name": "Volet",
-         "touch": "P"
+         "touch": "p"
       },
       {
          "name": "Train d'atterrissage",
-         "touch": "G"
+         "touch": "g"
+      },
+      {
+         "name": "jsp",
+         "touch": "Shift+p"
       }
    ],
    "Avions 2": [
       {
          "name": "Aerofrein",
-         "touch": "B"
+         "touch": "b"
       },
       {
          "name": "Ejection",
-         "touch": "F"
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
       }
    ]
 }
