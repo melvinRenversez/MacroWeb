@@ -2,15 +2,15 @@
    "su-17": [
       {
          "name": "Volet",
-         "touch": "p"
+         "touch": "p",
+         "switchable": true,
+         "default": false 
       },
       {
          "name": "Train d'atterrissage",
-         "touch": "g"
-      },
-      {
-         "name": "jsp",
-         "touch": "Shift+p"
+         "touch": "g",
+         "switchable": true,
+         "default": true 
       }
    ],
    "Avions 2": [
@@ -26,5 +26,263 @@
          "name": "Volet",
          "touch": "p"
       }
+   ],
+   "31 Touch": [
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      }
+   ],
+   "32 Touch": [
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Volet",
+         "touch": "p"
+      },
+      {
+         "name": "Aerofrein",
+         "touch": "b"
+      },
+      {
+         "name": "Ejection",
+         "touch": "f"
+      }
+   ],
+   "Arma 3": [
    ]
 }

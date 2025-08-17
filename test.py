@@ -45,6 +45,10 @@ SPECIAL_KEYS = {
 def index():
     return render_template("index.html")
 
+@app.route("/setting")
+def setting():
+    return render_template("setting.html")
+
 
 @app.route("/api/getAircraftName")
 def getAircraftName():
@@ -109,6 +113,41 @@ def sendCommand():
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
+    
+    
+
+@app.route("/api/sendNewTouch", methods=["POST"])
+def sendNewTouch():
+
+    data = request.get_json().get("touchs")
+    
+    print(data)
+    
+    aircraftName = data.get("aircraft")
+    
+    print(aircraftName)
+    
+    
+    
+    with open("data.json", "r", encoding="utf-8") as f:
+        allTouch = json.load(f)
+    
+    print(allTouch[aircraftName])
+    
+    print("new touch")
+    
+    
+    touch = {k: v for k, v in data.items() if k != "aircraft"}
+    
+    print(touch)
+    
+    allTouch[aircraftName].append(touch)
+    
+    print(allTouch[aircraftName])
+    
+    with open("data.json", "w", encoding="utf-8") as f :
+        json.dump(allTouch, f, ensure_ascii=False, indent=3)
+    
 
 
 if __name__ == "__main__":

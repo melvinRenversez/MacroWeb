@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+
+
+<style>
+   :root {
+      /* RED */
+      --red-light-color: rgb(223, 36, 36);
+      /* GREEN  */
+      --green-light-color: rgb(50, 255, 50);
+   }
+
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Courier New', Courier, monospace;
+   }
+
+   body {
+      padding: 50px;
+      background: #222;
+   }
+
+   .modal {
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      /* background: red; */
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+
+      width: 360px;
+      height: 460px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   h2 {
+      padding-top: 10px;
+      color: #eee;
+      text-transform: uppercase;
+   }
+
+   form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      /* gap: 35px; */
+      padding: 0px 0 0px 0;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+   }
+
+   form .field {
+      position: relative;
+      width: 100%;
+   }
+
+   form .field input {
+      width: 100%;
+      padding: 13px;
+      font-size: 0.9rem;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      background: transparent;
+      color: #eee;
+   }
+
+   form .field label {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      pointer-events: none;
+      transition: 0.2s ease;
+      font-size: 0.9rem;
+      padding: 0 4px;
+      color: #eee;
+   }
+
+   form .field input:focus+label,
+   form .field input:not(:placeholder-shown)+label,
+   form .field input:hover+label {
+      top: -5px;
+      left: 5px;
+      font-size: 0.9rem;
+      color: #eee;
+   }
+
+   input:focus {
+      box-shadow: 0 4px 6px -2px var(--green-light-color);
+   }
+
+   .trueFalse {
+      display: flex;
+
+      /* background: red; */
+
+      justify-content: space-around;
+      align-items: center;
+   }
+
+
+   .default {
+      opacity: 0;
+
+      transition: opacity 0.3s ease;
+   }
+
+   .default.actif {
+      opacity: 1;
+   }
+
+   .buttons {
+      /* background: red; */
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      padding: 0 20px;
+   }
+
+   .checkboxInput {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+      gap: 20px;
+   }
+
+   input[type=checkbox] {
+      border: 1px solid #333;
+      background: transparent;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+
+      border-radius: 100%;
+
+      background: var(--red-light-color);
+      box-shadow: 0 0 12px 7px var(--red-light-color);
+
+      cursor: pointer;
+   }
+
+
+   input[type=checkbox]:checked {
+
+      background: var(--green-light-color);
+      box-shadow: 0 0 12px 7px var(--green-light-color);
+
+   }
+
+   .buttons button {
+      width: 50%;
+      padding: 10px 0;
+      border: none;
+
+      border-radius: 10px;
+
+      color: #eee;
+
+      background: transparent;
+      backdrop-filter: blur(12px);
+
+      border: 1px solid #333;
+
+      cursor: pointer;
+
+   }
+
+   .trueFalse label {
+      color: #eee;
+   }
+
+   .addButton,
+   .removeButton {
+      transition: all 0.3s ease;
+   }
+
+   .addButton:hover {
+      box-shadow: 0 0 12px 1px var(--green-light-color);
+      color: var(--green-light-color);
+   }
+   
+   .removeButton:hover {
+      box-shadow: 0 0 12px 1px var(--red-light-color);
+      color: var(--red-light-color);
+   }
+</style>
+
+
+<body>
+
+   <div class="modal">
+
+      <h2>Add Touch</h2>
+
+      <form action="">
+
+         <div class="field">
+
+            <input name="name" type="text" value="" placeholder="">
+            <label for="">Name</label>
+         </div>
+
+         <div class="trueFalse">
+
+            <div class="switch checkboxInput">
+
+               <label for="">Switchable</label>
+               <input name="switchable" type="checkbox" id="switchableInput">
+
+            </div>
+
+            <div class="default checkboxInput" id="defaultInput">
+
+               <label for="">Default</label>
+               <input type="checkbox" name="default" id="nextCheck">
+
+            </div>
+
+
+
+         </div>
+
+         <div class="field">
+
+            <input name="touch" type="text" value="" id="hotkey" placeholder="" readonly>
+            <label for="">Touch</label>
+         </div>
+
+         <div class="buttons">
+
+            <button class="addButton">Add</button>
+            <button class="removeButton">Remove</button>
+         </div>
+
+      </form>
+
+   </div>
+
+</body>
+
+<script>
+
+   const hotkeyInput = document.getElementById('hotkey');
+   const switchableInput = document.getElementById("switchableInput")
+   const defaultInput = document.getElementById("defaultInput")
+   const nextCheck = document.getElementById("nextCheck")
+   const form = document.querySelector("form")
+
+   // Capture des touches pour hotkey
+   hotkeyInput.addEventListener('keydown', (e) => {
+      e.preventDefault();
+      let keys = [];
+      if (e.ctrlKey) keys.push('Ctrl');
+      if (e.shiftKey) keys.push('Shift');
+      if (e.altKey) keys.push('Alt');
+      if (e.metaKey) keys.push('Meta');
+      if (!['Control', 'Shift', 'Alt', 'Meta'].includes(e.key)) keys.push(e.key.toLowerCase());
+      hotkeyInput.value = keys.join('+');
+   });
+
+   switchableInput.addEventListener("change", (e) => {
+      console.log("change")
+
+      console.log(e.target.checked)
+
+      if (e.target.checked == false) {
+         nextCheck.checked = false
+      }
+
+      defaultInput.classList.toggle("actif")
+   })
+
+   form.addEventListener("submit", (e) => {
+
+      e.preventDefault()
+
+      const data = new FormData(form)
+
+      const obj = Object.fromEntries(data.entries())
+
+      obj.switchable = form.switchableInput.checked
+      obj.default = form.nextCheck.checked
+
+      console.log(obj)
+   })
+
+
+</script>
+
+</html>
