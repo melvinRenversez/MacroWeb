@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import json
 from pynput.keyboard import Controller, Key
 
-# Max 45 button
+# Max 32 button
 
 
 HOST = "0.0.0.0"

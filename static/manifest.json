@@ -1,0 +1,6 @@
+{
+  "name": "Mon Serveur Flask",
+  "short_name": "FlaskApp",
+  "start_url": "/",
+  "display": "standalone"
+}
